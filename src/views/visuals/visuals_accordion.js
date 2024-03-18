@@ -29,7 +29,7 @@ const VisualAccordion = () => {
 
     const items = [
         { title: 'Visual Suggested', content: 'Content for Section 1' },
-        { title: 'Customized Visual Selection', content: 'Content for Section 2' }
+        { title: 'Visual Selection', content: 'Content for Section 2' }
       ];
 
       const [activeIndex, setActiveIndex] = useState(-1); // -1 represents no active item
