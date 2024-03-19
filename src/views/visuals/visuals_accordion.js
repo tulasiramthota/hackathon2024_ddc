@@ -2,7 +2,7 @@
 
 */
 // reactstrap components
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Badge,
   Card,
@@ -24,19 +24,19 @@ import {
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
+import SuggestedVisuals from "components/SuggestedVisuals/SuggestedVisuals";
 
 const VisualAccordion = () => {
+  const items = [
+    { title: "Visual Suggested", content: <SuggestedVisuals /> },
+    { title: "Visual Selection", content: "Content for Section 2" },
+  ];
 
-    const items = [
-        { title: 'Visual Suggested', content: 'Content for Section 1' },
-        { title: 'Visual Selection', content: 'Content for Section 2' }
-      ];
+  const [activeIndex, setActiveIndex] = useState(-1); // -1 represents no active item
 
-      const [activeIndex, setActiveIndex] = useState(-1); // -1 represents no active item
-
-      const handleClick = (index) => {
-        setActiveIndex(index === activeIndex ? -1 : index); // Toggle active state
-      };
+  const handleClick = (index) => {
+    setActiveIndex(index === activeIndex ? -1 : index); // Toggle active state
+  };
 
   return (
     <>
@@ -50,18 +50,34 @@ const VisualAccordion = () => {
               <CardHeader className="border-0">
                 <h3 className="mb-0">Visual Accordion</h3>
               </CardHeader>
-                <div className="accordion" style={{ paddingLeft: '25px' }}>
-                    {items.map((item, index) => (
-                        <div key={item.title} className="accordion-item">
-                        <h2 className="accordion-header" onClick={() => handleClick(index)} style={{backgroundColor:'#5e96e4', color:'#fff', marginRight:'25px'}}>
-                            {item.title}
-                        </h2>
-                        <div className="accordion-content" style={{ display: activeIndex === index ? 'block' : 'none' }}>
-                            {item.content}
-                        </div>
-                        </div>
-                    ))}
-                </div>
+              <div className="accordion" style={{ paddingLeft: "25px" }}>
+                {items.map((item, index) => (
+                  <div key={item.title} className="accordion-item">
+                    <h2
+                      className="accordion-header"
+                      onClick={() => handleClick(index)}
+                      style={{
+                        backgroundColor: "#5e96e4",
+                        color: "#fff",
+                        marginRight: "25px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {item.title}
+                    </h2>
+                    <div
+                      className="accordion-content"
+                      style={{
+                        display: activeIndex === index ? "flex" : "none",
+                        flexWrap: "wrap", // Allow items to wrap to the next line if needed
+                        justifyContent: "space-between", // Space items evenly along the main axis
+                      }}
+                    >
+                      {item.content}
+                    </div>
+                  </div>
+                ))}
+              </div>
               <CardFooter className="py-4">
                 <nav aria-label="...">
                   {/* <Pagination
@@ -117,7 +133,6 @@ const VisualAccordion = () => {
             </Card>
           </div>
         </Row>
-
       </Container>
     </>
   );
