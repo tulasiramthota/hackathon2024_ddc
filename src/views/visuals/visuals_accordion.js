@@ -24,12 +24,13 @@ import {
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
+import VisualList from 'components/Accordion/VisualList';
 
-const VisualAccordion = () => {
+const VisualAccordion = ({ sourceId }) => {
 
     const items = [
-        { title: 'Visual Suggested', content: 'Content for Section 1' },
-        { title: 'Visual Selection', content: 'Content for Section 2' }
+        { title: 'Visual Suggested', content: 'Content for Section 1',sourceId : sourceId },
+        { title: 'Visual Selection', content: <VisualList argument={sourceId}/> ,sourceId : sourceId }
       ];
 
       const [activeIndex, setActiveIndex] = useState(-1); // -1 represents no active item
@@ -50,7 +51,7 @@ const VisualAccordion = () => {
               <CardHeader className="border-0">
                 <h3 className="mb-0">Visual Accordion</h3>
               </CardHeader>
-                <div className="accordion" style={{ paddingLeft: '25px' }}>
+                <div className="accordion" style={{ paddingLeft: '25px' }} >
                     {items.map((item, index) => (
                         <div key={item.title} className="accordion-item">
                         <h2 className="accordion-header" onClick={() => handleClick(index)} style={{backgroundColor:'#5e96e4', color:'#fff', marginRight:'25px'}}>

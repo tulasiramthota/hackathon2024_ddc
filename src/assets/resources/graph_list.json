@@ -1,0 +1,247 @@
+[
+     {
+        "file_name": "arc_diagram.svg",
+        "graph_name": "Arc Graph",
+        "graph_types": "Network Diagram"
+    },
+    {
+        "file_name": "area_graph.svg",
+        "graph_name": "Area Graph",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "bar_graph.svg",
+        "graph_name": "Bar Chart",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "box_plot.svg",
+        "graph_name": "Box &amp; Whisker Plot",
+        "graph_types": "Comparisons,Range"
+    },
+    {
+        "file_name": "brainstorm.svg",
+        "graph_name": "Brainstorm",
+        "graph_types": "Relationships"
+    },
+    {
+        "file_name": "bubble_chart.svg",
+        "graph_name": "Bubble Chart",
+        "graph_types": "Comparisons,Proportions,Relationships,Data Over Time"
+    },
+    {
+        "file_name": "bubble_map.svg",
+        "graph_name": "Bubble Map",
+        "graph_types": "Proportions,Location"
+    },
+    {
+        "file_name": "bullet_chart.svg",
+        "graph_name": "Bullet Graph",
+        "graph_types": "Comparisons,Range"
+    },
+    {
+        "file_name": "calendar.svg",
+        "graph_name": "Calendar",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "candlestick_chart.svg",
+        "graph_name": "Candlestick Chart",
+        "graph_types": "Data Over Time,Range"
+    },
+    {
+        "file_name": "chord_diagram.svg",
+        "graph_name": "Chord Diagram",
+        "graph_types": "Comparisons,Relationships"
+    },
+    {
+        "file_name": "choropleth_map.svg",
+        "graph_name": "Choropleth Map",
+        "graph_types": "Comparisons,Location"
+    },
+    {
+        "file_name": "circle_packing.svg",
+        "graph_name": "Circle Packing",
+        "graph_types": "Proportions,Hierarchy"
+    },
+    {
+        "file_name": "connection_map.svg",
+        "graph_name": "Connection Map",
+        "graph_types": "Relationships,Location"
+    },
+    {
+        "file_name": "donut_chart.svg",
+        "graph_name": "Donut Chart",
+        "graph_types": "Comparisons,Proportions,Part-to-a-whole"
+    },
+    {
+        "file_name": "point_map.svg",
+        "graph_name": "Dot Map",
+        "graph_types": "Location"
+    },
+    {
+        "file_name": "dot_matrix_chart.svg",
+        "graph_name": "Dot Matrix Chart",
+        "graph_types": "Comparisons,Proportions"
+    },
+    {
+        "file_name": "heat_map.svg",
+        "graph_name": "Heatmap",
+        "graph_types": "Comparisons,Relationships,Data Over Time"
+    },
+    {
+        "file_name": "line_graph.svg",
+        "graph_name": "Line Graph",
+        "graph_types": "Comparisons,Data Over Time,Range"
+    },
+    {
+        "file_name": "marimekko_chart.svg",
+        "graph_name": "Marimekko Chart",
+        "graph_types": "Comparisons,Proportions,Relationships,Part-to-a-whole"
+    },
+    {
+        "file_name": "multiset_bar_chart.svg",
+        "graph_name": "Multi-set Bar Chart",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "network_diagram.svg",
+        "graph_name": "Network Diagram",
+        "graph_types": "Relationships"
+    },
+    {
+        "file_name": "nightingale_rose_chart.svg",
+        "graph_name": "Nightingale Rose Chart",
+        "graph_types": "Comparisons,Proportions,Data Over Time"
+    },
+    {
+        "file_name": "non_ribbon_chord_diagram.svg",
+        "graph_name": "Non-ribbon Chord Diagram",
+        "graph_types": "Relationships"
+    },
+    {
+        "file_name": "parallel_coordinates.svg",
+        "graph_name": "Parallel Coordinates Plot",
+        "graph_types": "Comparisons,Relationships"
+    },
+    {
+        "file_name": "parallel_sets.svg",
+        "graph_name": "Parallel Sets",
+        "graph_types": "ComparisonsProportions"
+    },
+    {
+        "file_name": "pictogram_chart.svg",
+        "graph_name": "Pictogram Chart",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "pie_chart.svg",
+        "graph_name": "Pie Chart",
+        "graph_types": "Comparisons,Proportions,Part-to-a-whole"
+    },
+    {
+        "file_name": "population_pyramid.svg",
+        "graph_name": "Population Pyramid",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "proportional_area_chart.svg",
+        "graph_name": "Proportional Area",
+        "graph_types": "Comparisons,Proportions"
+    },
+    {
+        "file_name": "radar_chart.svg",
+        "graph_name": "Radar Chart",
+        "graph_types": "Comparisons,Relationships"
+    },
+    {
+        "file_name": "radial_bar_chart.svg",
+        "graph_name": "Radial Bar",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "radial_column_chart.svg",
+        "graph_name": "Radial Column",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "sankey_diagram.svg",
+        "graph_name": "Sankey Diagram",
+        "graph_types": "Proportions"
+    },
+    {
+        "file_name": "scatterplot.svg",
+        "graph_name": "Scatterplot Chart",
+        "graph_types": "Relationships"
+    },
+    {
+        "file_name": "span_chart.svg",
+        "graph_name": "Span",
+        "graph_types": "Comparisons,Range"
+    },
+    {
+        "file_name": "condegram_spiral_plot.svg",
+        "graph_name": "Spiral Plot",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "stacked_area_graph.svg",
+        "graph_name": "Stacked Area",
+        "graph_types": "Comparisons,Data Over Time"
+    },
+    {
+        "file_name": "stacked_bar_graph.svg",
+        "graph_name": "Stacked Bar",
+        "graph_types": "Comparisons,Proportions,Part-to-a-whole"
+    },
+    {
+        "file_name": "stream_graph.svg",
+        "graph_name": "Stream Graph",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "sunburst_diagram.svg",
+        "graph_name": "Sunburst Diagram",
+        "graph_types": "Hierarchy,Part-to-a-whole"
+    },
+    {
+        "file_name": "tally_chart.svg",
+        "graph_name": "Tally Chart",
+        "graph_types": "Comparisons"
+    },
+    {
+        "file_name": "timeline.svg",
+        "graph_name": "Timeline",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "time_table.svg",
+        "graph_name": "Timetable",
+        "graph_types": "Data Over Time"
+    },
+    {
+        "file_name": "tree_diagram.svg",
+        "graph_name": "Tree Diagram",
+        "graph_types": "Relationships,Hierarchy"
+    },
+    {
+        "file_name": "treemap.svg",
+        "graph_name": "Treemap",
+        "graph_types": "Comparisons,Proportions,Part-to-a-whole"
+    },
+    {
+        "file_name": "venn_diagram.svg",
+        "graph_name": "Venn Diagram",
+        "graph_types": "Comparisons,Relationships"
+    },
+    {
+        "file_name": "violin_plot.svg",
+        "graph_name": "Violin Plot",
+        "graph_types": "Range"
+    },
+    {
+        "file_name": "word_cloud.svg",
+        "graph_name": "Word Cloud",
+        "graph_types": "Proportions"
+    }
+]

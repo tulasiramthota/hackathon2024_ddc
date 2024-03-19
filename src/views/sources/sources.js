@@ -54,7 +54,7 @@ const Sources = () => {
   const navigate = useNavigate();
 
   const handleCreateVisualClick = () => {
-    navigate('/admin/visual_accordion'); 
+    navigate('/admin/visual_accordion',{ sourceId: '123' }); 
   };
 
   return (

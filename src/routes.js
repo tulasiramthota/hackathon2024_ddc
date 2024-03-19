@@ -26,13 +26,7 @@ import VisualAccordion from "views/visuals/visuals_accordion";
 import Icons from "views/examples/Icons.js";
 
 var routes = [
-  {
-    path: "/index",
-    name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
-    component: <Index />,
-    layout: "/admin",
-  },
+
   {
     path: "/sources",
     name: "Data Sources",
