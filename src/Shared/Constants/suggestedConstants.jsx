@@ -81,22 +81,3 @@ export const suggested_visual_items = [
     icon: referenceIcon,
   },
 ];
-
-export const demoItems = [
-  {
-    name: "Range",
-    icon: rangeIcon,
-  },
-  {
-    name: "Date Over Time",
-    icon: dateTimeIcon,
-  },
-  {
-    name: "Analysing text",
-    icon: analysingIcon,
-  },
-  {
-    name: "Reference Tool",
-    icon: referenceIcon,
-  },
-];

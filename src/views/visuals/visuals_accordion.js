@@ -24,16 +24,24 @@ import {
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
+import VisualList from "components/Accordion/VisualList";
 import SuggestedVisuals from "components/SuggestedVisuals/SuggestedVisuals";
 
-const VisualAccordion = () => {
+const VisualAccordion = ({ sourceId }) => {
   const items = [
-    { title: "Visual Suggested", content: <SuggestedVisuals /> },
-    { title: "Visual Selection", content: "Content for Section 2" },
+    {
+      title: "Visual Suggested",
+      content: <SuggestedVisuals />,
+      sourceId: sourceId,
+    },
+    {
+      title: "Visual Selection",
+      content: <VisualList argument={sourceId} />,
+      sourceId: sourceId,
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(-1); // -1 represents no active item
-
   const handleClick = (index) => {
     setActiveIndex(index === activeIndex ? -1 : index); // Toggle active state
   };
