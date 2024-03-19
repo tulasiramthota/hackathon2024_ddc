@@ -1,4 +1,4 @@
-export default function SuggestedVisual({ name, icon }) {
+export default function SuggestedVisual({ name, icon, handleIconSelect }) {
   return (
     <div
       className="search_circle_block"
@@ -9,7 +9,7 @@ export default function SuggestedVisual({ name, icon }) {
         textAlign: "center",
         cursor: "pointer",
       }}
-      //   onClick={handleIconSelect}
+      onClick={handleIconSelect}
     >
       <img
         className="search_circle"

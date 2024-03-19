@@ -3,6 +3,7 @@
 */
 // reactstrap components
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   Badge,
   Card,
@@ -27,7 +28,17 @@ import Header from "components/Headers/Header.js";
 import VisualList from "components/Accordion/VisualList";
 import SuggestedVisuals from "components/SuggestedVisuals/SuggestedVisuals";
 
-const VisualAccordion = ({ sourceId }) => {
+const VisualAccordion = () => {
+  const location = useLocation();
+  const { state } = location;
+  const [sourceId, setSourceId] = useState(null);
+
+  useEffect(() => {
+    if (state && state.sourceId) {
+      setSourceId(state.sourceId);
+    }
+  }, [state]);
+  console.log(sourceId);
   const items = [
     {
       title: "Visual Suggested",
@@ -36,7 +47,7 @@ const VisualAccordion = ({ sourceId }) => {
     },
     {
       title: "Visual Selection",
-      content: <VisualList argument={sourceId} />,
+      content: sourceId ? <VisualList sourceId={sourceId} /> : null,
       sourceId: sourceId,
     },
   ];

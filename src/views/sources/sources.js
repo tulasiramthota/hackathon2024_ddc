@@ -57,8 +57,10 @@ const Sources = () => {
 
   const navigate = useNavigate();
 
-  const handleCreateVisualClick = () => {
-    navigate("/admin/visual_accordion", { sourceId: "123" });
+  const handleCreateVisualClick = (inventoryItemId) => {
+    navigate("/admin/visual_accordion", {
+      state: { sourceId: inventoryItemId },
+    });
   };
 
   return (
@@ -138,7 +140,9 @@ const Sources = () => {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={handleCreateVisualClick}
+                              onClick={() =>
+                                handleCreateVisualClick(item.inventoryItemId)
+                              }
                             >
                               Create Visual
                             </DropdownItem>

@@ -28,8 +28,9 @@ const VisualList = ({ sourceId }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log(sourceId);
         const response = await fetch(
-          `${process.env.REACT_APP_COMPOSER_URL}/api/sources/65f18c7b35034f5ca7399e67/visual-types?includeRestriction=true`,
+          `${process.env.REACT_APP_COMPOSER_URL}/api/sources/${sourceId}/visual-types?includeRestriction=true`,
           {
             method: "GET",
             headers: {
