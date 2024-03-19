@@ -23,6 +23,7 @@ import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Sources from "views/sources/sources";
 import VisualAccordion from "views/visuals/visuals_accordion";
+import DashboardVisual from "views/dashboard/dashboard_visual";
 import Icons from "views/examples/Icons.js";
 
 var routes = [
@@ -39,6 +40,14 @@ var routes = [
     name: "Visual Accordion",
     icon: "ni ni-bullet-list-67 text-red",
     component: <VisualAccordion />,
+    layout: "/admin",
+  },
+  ,
+  {
+    path: "/dashboard_visual",
+    name: "Dashboard Visual",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: <DashboardVisual />,
     layout: "/admin",
   },
 ];
