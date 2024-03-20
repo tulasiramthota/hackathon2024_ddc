@@ -56,6 +56,7 @@ const GraphFileList = [
     icon: arc_diagram,
     name: "Arc Graph",
     graph_types: "Network Diagram",
+    graph : 'ARC'
   },
   {
     icon: area_graph,
@@ -81,16 +82,19 @@ const GraphFileList = [
     icon: bubble_chart,
     name: "Bubble Chart",
     graph_types: "Comparisons,Proportions,Relationships,Data Over Time",
+    graph : 'FLOATING_BUBBLES'
   },
   {
     icon: bubble_map,
     name: "Bubble Map",
     graph_types: "Proportions,Location",
+    graph : 'BUBBLES'
   },
   {
     icon: bullet_chart,
     name: "Bullet Graph",
     graph_types: "Comparisons,Range",
+    graph : 'BULLET_GAUGE'
   },
   {
     icon: calendar,
@@ -126,6 +130,7 @@ const GraphFileList = [
     icon: donut_chart,
     name: "Donut Chart",
     graph_types: "Comparisons,Proportions,Part-to-a-whole",
+    graph : 'DONUT'
   },
   {
     icon: point_map,
@@ -141,11 +146,19 @@ const GraphFileList = [
     icon: heat_map,
     name: "Heatmap",
     graph_types: "Comparisons,Relationships,Data Over Time",
+    graph : 'HEAT_MAP'
   },
   {
     icon: line_graph,
     name: "Line Graph",
     graph_types: "Comparisons,Data Over Time,Range",
+    graph : 'LINE_CHART'
+  },
+  {
+    icon: line_graph,
+    name: "Line Graph Line Trend: Attribute Values",
+    graph_types: "Comparisons,Data Over Time,Range",
+    graph : 'LINE_CHART_CONTINUOUS'
   },
   {
     icon: marimekko_chart,
@@ -154,8 +167,9 @@ const GraphFileList = [
   },
   {
     icon: multiset_bar_chart,
-    name: "Multi-set Bar Chart",
+    name: "Combo Chart",
     graph_types: "Comparisons",
+    graph : 'COMBO_CHART'
   },
   {
     icon: network_diagram,
@@ -191,6 +205,7 @@ const GraphFileList = [
     icon: pie_chart,
     name: "Pie Chart",
     graph_types: "Comparisons,Proportions,Part-to-a-whole",
+    graph : "PIE"
   },
   {
     icon: population_pyramid,
@@ -226,6 +241,7 @@ const GraphFileList = [
     icon: scatterplot,
     name: "Scatterplot Chart",
     graph_types: "Relationships",
+    graph : 'SCATTERPLOT'
   },
   {
     icon: span_chart,
@@ -246,6 +262,7 @@ const GraphFileList = [
     icon: stacked_bar_graph,
     name: "Stacked Bar",
     graph_types: "Comparisons,Proportions,Part-to-a-whole",
+    graph : 'UBER_BARS'
   },
   {
     icon: stream_graph,
@@ -256,6 +273,7 @@ const GraphFileList = [
     icon: sunburst_diagram,
     name: "Sunburst Diagram",
     graph_types: "Hierarchy,Part-to-a-whole",
+    graph:"SUN_BURST"
   },
   {
     icon: tally_chart,
@@ -269,8 +287,9 @@ const GraphFileList = [
   },
   {
     icon: time_table,
-    name: "Timetable",
+    name: "Pivot Table",
     graph_types: "Data Over Time",
+    graph : 'PIVOT_TABLE'
   },
   {
     icon: tree_diagram,
@@ -281,6 +300,7 @@ const GraphFileList = [
     icon: treemap,
     name: "Treemap",
     graph_types: "Comparisons,Proportions,Part-to-a-whole",
+    graph : 'TREE_MAP'
   },
   {
     icon: venn_diagram,
@@ -296,6 +316,7 @@ const GraphFileList = [
     icon: word_cloud,
     name: "Word Cloud",
     graph_types: "Proportions",
+    graph : 'WORD_CLOUD'
   },
 ];
 
