@@ -23,8 +23,10 @@ import { useNavigate } from "react-router-dom";
 import graph_list from "./GraphFileList";
 
 const VisualList = ({ sourceId }) => {
-  const [data, setData] = useState([]);
-
+	const navigate  = useNavigate();
+	console.log("VisualList");	
+	console.log(sourceId);
+  const [data, setData] = useState([]); 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,8 +44,17 @@ const VisualList = ({ sourceId }) => {
           }
         );
         const jsonData = await response.json();
-        console.log(jsonData.content);
-        setData(jsonData.content);
+        console.log(jsonData.content);	
+		const graphListModified=[];
+		jsonData.content.forEach(item => {
+			let graphObj=graph_list.find(obj => obj.graph === item.type);
+			if(graphObj!==undefined){
+				graphObj['visualTypeId']=item.visualTypeId;
+				graphObj['sourceId']=sourceId;
+                graphListModified.push(graphObj);
+			}			
+		});	
+        setData(graphListModified);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -60,9 +71,18 @@ const VisualList = ({ sourceId }) => {
     return imageModule;
   };
 
+  const handleIconSelect = (selectedItem) => {
+    //  const filteredItems = GraphFileList.filter((item) =>
+    //    item.graph_types.includes(name)
+    //  )
+    if(selectedItem.graph!==undefined&&selectedItem.visualTypeId!==undefined){
+      navigate('/admin/dashboard_visual', { state: selectedItem });
+    }
+  };
+
   return (
     <>
-      {graph_list.map((item) => (
+      {data.map((item) => (
         <div
           className="circle_block"
           style={{
@@ -73,12 +93,13 @@ const VisualList = ({ sourceId }) => {
             cursor: "pointer",
           }}
         >
-          <a href="methods/arc_diagram.html" class="circle">
+          <a href="" class="circle">
             <img
               key={item.name}
               src={item.icon}
               alt={item.name}
               style={{ width: "125px", height: "165px" }}
+			  onClick={() => handleIconSelect(item)}
             />
           </a>
           <p>{item.name}</p>

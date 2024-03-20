@@ -37,7 +37,7 @@ var routes = [
   },
   {
     path: "/visual_accordion",
-    name: "Visual Accordion",
+    name: "Visual Selection",
     icon: "ni ni-bullet-list-67 text-red",
     component: <VisualAccordion />,
     layout: "/admin",
@@ -45,7 +45,7 @@ var routes = [
   ,
   {
     path: "/dashboard_visual",
-    name: "Dashboard Visual",
+    name: "Selected Visual",
     icon: "ni ni-bullet-list-67 text-red",
     component: <DashboardVisual />,
     layout: "/admin",
