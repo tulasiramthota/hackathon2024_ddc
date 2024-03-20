@@ -18,8 +18,52 @@
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { useEffect, useState } from "react";
+import connectionIcon from "../../assets/img/icons/common/database-2-fill.svg";
+import dashboardIcon from "../../assets/img/icons/common/dashboard-interactions.svg";
+import sourceIcon from "../../assets/img/icons/common/big-data-icon.svg";
+import visualIcon from "../../assets/img/icons/common/visual.svg";
+
+const fetchData = async (url) => {
+  try {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Basic ${btoa(
+          `${process.env.REACT_APP_ADMIN_NAME}:${process.env.REACT_APP_PASSWORD}`
+        )}`,
+        "Content-Type": "application/vnd.composer.v3+json",
+      },
+    });
+    const jsonData = await response.json();
+    return jsonData.content.length;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return 0;
+  }
+};
 
 const Header = () => {
+  const [connections, setConnection] = useState(0);
+  const [sources, setSources] = useState(0);
+  const [dashboards, setDashboards] = useState(0);
+  const [visuals, setVisuals] = useState(0);
+
+  useEffect(() => {
+    fetchData(`${process.env.REACT_APP_COMPOSER_URL}/api/connections`).then(
+      (length) => setConnection(length)
+    );
+    fetchData(
+      `${process.env.REACT_APP_COMPOSER_URL}/api/inventory?sort=NAME&sortOrder=ASC&includeItems=ALL&favorites=false&type=SOURCE`
+    ).then((length) => setSources(length));
+    fetchData(
+      `${process.env.REACT_APP_COMPOSER_URL}/api/inventory?sort=NAME&sortOrder=ASC&includeItems=ALL&favorites=false&type=VISUAL`
+    ).then((length) => setVisuals(length));
+    fetchData(
+      `${process.env.REACT_APP_COMPOSER_URL}/api/inventory?sort=NAME&sortOrder=ASC&includeItems=ALL&favorites=false&type=DASHBOARD`
+    ).then((length) => setDashboards(length));
+  }, []);
+
   return (
     <>
       <div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
@@ -39,15 +83,16 @@ const Header = () => {
                           Connections
                         </CardTitle>
                         <span className="h2 font-weight-bold mb-0">
-                          0
+                          {connections}
                         </span>
                       </div>
                       <Col className="col-auto">
-                        <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-                          <i className="fas fa-chart-bar" />
-                        </div>
+                        <img
+                          src={connectionIcon}
+                          style={{ width: "75px", height: "75px" }}
+                        />
                       </Col>
-                    </Row>                   
+                    </Row>
                   </CardBody>
                 </Card>
               </Col>
@@ -62,12 +107,15 @@ const Header = () => {
                         >
                           Sources
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">0</span>
+                        <span className="h2 font-weight-bold mb-0">
+                          {sources}
+                        </span>
                       </div>
                       <Col className="col-auto">
-                        <div className="icon icon-shape bg-warning text-white rounded-circle shadow">
-                          <i className="fas fa-chart-pie" />
-                        </div>
+                        <img
+                          src={sourceIcon}
+                          style={{ width: "75px", height: "75px" }}
+                        />
                       </Col>
                     </Row>
                   </CardBody>
@@ -84,12 +132,15 @@ const Header = () => {
                         >
                           Visuals
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">0</span>
+                        <span className="h2 font-weight-bold mb-0">
+                          {visuals}
+                        </span>
                       </div>
                       <Col className="col-auto">
-                        <div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                          <i className="fas fa-users" />
-                        </div>
+                        <img
+                          src={visualIcon}
+                          style={{ width: "75px", height: "75px" }}
+                        />
                       </Col>
                     </Row>
                   </CardBody>
@@ -104,14 +155,17 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Dashboard
+                          Dashboards
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">0</span>
+                        <span className="h2 font-weight-bold mb-0">
+                          {dashboards}
+                        </span>
                       </div>
                       <Col className="col-auto">
-                        <div className="icon icon-shape bg-info text-white rounded-circle shadow">
-                          <i className="fas fa-percent" />
-                        </div>
+                        <img
+                          src={dashboardIcon}
+                          style={{ width: "75px", height: "75px" }}
+                        />
                       </Col>
                     </Row>
                   </CardBody>

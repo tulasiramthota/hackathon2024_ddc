@@ -42,7 +42,7 @@ const VisualAccordion = () => {
   const items = [
     {
       title: "Visual Suggested",
-      content: <SuggestedVisuals />,
+      content: sourceId ? <SuggestedVisuals sourceId={sourceId} /> : null,
       sourceId: sourceId,
     },
     {
