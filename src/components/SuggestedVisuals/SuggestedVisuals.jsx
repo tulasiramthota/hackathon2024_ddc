@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { suggested_visual_items } from "Shared/Constants/suggestedConstants";
-import { GraphIconList } from "Shared/Constants/suggestedConstants";
+import GraphFileList from "components/Accordion/GraphFileList";
 import SuggestedVisual from "components/SuggestedVisual/SuggestedVisual";
 // import { ZdDialog } from "components/ZdDialog/ZdDialog";
 
@@ -9,7 +9,7 @@ export default function SuggestedVisuals() {
   const [selected, setSelected] = useState(false);
 
   const handleIconSelect = (name) => {
-    const filteredItems = GraphIconList.filter((item) =>
+    const filteredItems = GraphFileList.filter((item) =>
       item.graph_types.includes(name)
     );
     setVisualItems(filteredItems);
@@ -25,12 +25,20 @@ export default function SuggestedVisuals() {
     <>
       {selected && (
         <div
-          style={{ cursor: "pointer", color: "blue" }}
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            padding: "5px",
+            cursor: "pointer",
+            color: "blue",
+          }}
           onClick={handleResetItems}
         >
-          go back
+          Go Back
         </div>
       )}
+
       {visualItems.map(({ name, icon }) => (
         <SuggestedVisual
           key={name}

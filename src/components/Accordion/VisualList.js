@@ -64,7 +64,7 @@ const VisualList = ({ sourceId }) => {
     <>
       {graph_list.map((item) => (
         <div
-          class="circle_block"
+          className="circle_block"
           style={{
             flex: "0 0 calc(25% - 20px)", // 25% width minus margin
             marginRight: "20px",
@@ -75,13 +75,13 @@ const VisualList = ({ sourceId }) => {
         >
           <a href="methods/arc_diagram.html" class="circle">
             <img
-              key={item.graph_name}
-              src={item.file}
-              alt={item.graph_name}
+              key={item.name}
+              src={item.icon}
+              alt={item.name}
               style={{ width: "125px", height: "165px" }}
             />
           </a>
-          <p>{item.graph_name}</p>
+          <p>{item.name}</p>
         </div>
       ))}
     </>
